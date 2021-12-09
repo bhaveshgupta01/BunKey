@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Input_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="@string/input_here"
+        app:startIconDrawable="@drawable/input"
+        app:startIconContentDescription="@string/icon"
+        app:endIconMode="clear_text"
+        app:expandedHintEnabled="true"
+        app:helperTextEnabled="true"
+        app:helperText="only Alphabets, Numerics, '!', '@', '.', ',', '?' accepted"
+        app:errorEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/Input_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/CheckText"
+        android:paddingTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Input_view"
+        android:text="@string/what_to_do" />
+
+    <RadioGroup
+        android:id="@+id/action"
+        android:checkedButton="@id/encrypt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CheckText">
+    <RadioButton
+        android:id="@+id/encrypt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/encrypt"/>
+    <RadioButton
+        android:id="@+id/decrypt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/decrypt"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/Perform"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action"
+        android:text="@string/perform"
+        />
+
+    <ImageView
+        android:id="@+id/res"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingHorizontal="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Perform"
+        android:src="@drawable/output"
+        android:contentDescription="@string/icon" />
+
+    <TextView
+        android:id="@+id/CheckResult"
+        android:paddingTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/res"
+        app:layout_constraintTop_toBottomOf="@+id/Perform"
+        android:text="@string/result_is"
+        android:textStyle="bold" />
+
+
+
+    <TextView
+        android:id="@+id/ResultText"
+        android:layout_width="wrap_content"
+        android:paddingTop="5dp"
+        android:textIsSelectable="true"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/CheckResult"
+        app:layout_constraintTop_toBottomOf="@id/CheckResult"
+        android:text="@string/final_answer_comes_here"
+        android:textSize="15sp">
+    </TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

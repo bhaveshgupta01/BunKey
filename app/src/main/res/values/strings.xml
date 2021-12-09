@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BunKey</string>
+    <string name="what_to_do">What to do?</string>
+    <string name="encrypt">Encrypt?</string>
+    <string name="input_here">Input Here</string>
+    <string name="final_answer_comes_here">Final Answer comes here here</string>
+    <string name="result_is">Result is:</string>
+    <string name="perform">Perform</string>
+    <string name="decrypt">Decrypt?</string>
+    <string name="icon">Icon</string>
+</resources>
